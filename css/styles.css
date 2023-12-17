@@ -1,0 +1,39 @@
+/* Existing styles remain unchanged */
+
+#menu-table {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #faf6f6;
+    color: #0c0909;
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+#menu-table td {
+    padding: 10px;
+    border: 1px solid #131010;
+}
+
+#menu-table a {
+    text-decoration: none;
+    color: #0a0808;
+    font-weight: bold;
+}
+.logo img {
+    max-width: 50px; /* Sesuaikan dengan lebar maksimal logo */
+    height: auto;
+    margin-right: 10px; /* Atur margin agar ada jarak antara logo dan teks */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+header h1 {
+    margin: 0;
+}

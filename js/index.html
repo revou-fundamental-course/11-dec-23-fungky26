@@ -3,38 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Sekolah</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="file:///C:/Users/Fungky/Documents/revou-fungky/11-dec-23-fungky26/css/styles.css">
+    <title>Sekolah ABC</title>
 </head>
 <body>
-
     <header>
-        <h1>Profil Sekolah XYZ</h1>
+        <div class="logo">
+            <img src="https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/1166/original/RevoU_Logo_WhiteBG.png" alt="Sekolah ABC Logo">
+        </div>
+
     </header>
 
+    <!-- Menu Table -->
+    <table id="menu-table">
+        <tr>
+            <td><a href="#home">Home</a></td>
+            <td><a href="#profile">Our Profile</a></td>
+            <td><a href="#achivements">Achievements</a></td>
+            <td><a href="#contact">Contact</a></td>
+        </tr>
+    </table>
+
+    <section id="home">
+        <h2>Welcome to Sekolah ABC</h2>
+        <p>Providing quality education for a better future.</p>
+    </section>
+
+    <section id="profile">
+        <h2>Our Profile</h2>
+        <p>Learn about our school and our mission to educate and inspire.</p>
+    </section>
+
+    <section id="achivements">
+        <h2>Achievements</h2>
+        <p>Discover the accomplishments of our students and school.</p>
+    </section>
+
     <section id="contact">
-        <h2>Hubungi Kami</h2>
-        <form id="contactForm" onsubmit="validateForm(); return false;">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Nomor Telepon:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Kirim</button>
-        </form>
+        <h2>Contact Us</h2>
+        <p>Reach out to us for more information or to schedule a visit.</p>
     </section>
 
     <footer>
-        <p>&copy; 2023 Profil Sekolah XYZ</p>
+        <p>&copy; 2023 Sekolah ABC. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
