@@ -174,3 +174,58 @@ body {
     border: none;
     cursor: pointer;
 }
+#Home {
+    width: 1366px;
+    height: 578px;
+    background-color: #f0f0f0; /* Warna latar belakang halaman */
+    overflow-y: auto; /* Tambahkan scroll jika kontennya melebihi area yang ditentukan */
+}
+#facilitation {
+    text-align: center;
+    padding: 20px;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Mencegah scroll */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Mengisi tinggi minimum setidaknya hingga tampilan penuh viewport */
+}
+
+#profile {
+    border: 2px solid #333; /* Garis tepi persegi panjang */
+    padding: 20px;
+    margin-top: auto; /* Meletakkan di bagian paling bawah */
+    margin-right: 20px; /* Meletakkan di pojok kanan */
+    max-width: 400px; /* Maksimum lebar untuk memastikan sesuai dengan kontennya */
+}
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto;
+}
