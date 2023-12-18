@@ -76,10 +76,14 @@
             var welcomeMessage = document.getElementById('welcomeMessage');
             
             if (name.trim() !== '') {
-                welcomeMessage.textContent = 'Hello, ' + name + 'Selamat datang di website SMPN 4 MESUJI MAKMUR Klik home untuk masuk ke beranda.' + <button onclick="navigateTo('Home')">Go to Home</button> ;
+                welcomeMessage.textContent = 'Hello, ' + name + 'Selamat datang di website SMPN 4 MESUJI MAKMUR Klik home untuk masuk ke beranda.';
             } else {
                 welcomeMessage.textContent = 'Please enter your name.';
             }
+            var homeButton = document.createElement('button');
+homeButton.textContent = 'Go to Home';
+homeButton.onclick = function() {
+    navigateTo('banner');
         }
     </script>
   </body>
