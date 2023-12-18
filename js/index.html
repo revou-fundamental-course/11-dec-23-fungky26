@@ -59,27 +59,24 @@
     <title>Projeck Mini website Sekolah</title>
 </head>
 <body>
-    <!-- your existing content -->
+<title>Selamat Datang</title>
+</head>
+<body>
+<div id="welcomeMessage">
+    <h2>Selamat datang di Website Kami</h2>
+    <p>Masukkan nama Anda:</p>
+    <input type="text" id="nameInput" placeholder="Nama Anda">
+    <button id="submitButton" onclick="showWelcomeMessage()">Submit</button>
+</div>
 
-    <!-- Welcome Section -->
-    <section id="welcome">
-        <h2>Welcome to Our School</h2>
-        <label for="nameInput">Enter your name: </label>
-        <input type="text" id="nameInput" placeholder="Your Name">
-        <button onclick="displayWelcome()">Submit</button>
-        <p id="welcomeMessage"></p>
-    </section>
-
-    <script>
-        function displayWelcome() {
-            var name = document.getElementById('nameInput').value;
-            var welcomeMessage = document.getElementById('welcomeMessage');
-            
-            if (name.trim() !== '') {
-                welcomeMessage.textContent = 'Hello, ' + name + 'Selamat datang di website SMPN 4 MESUJI MAKMUR Klik home untuk masuk ke beranda.';
-            } else {
-                welcomeMessage.textContent = 'Please enter your name.';
-    </script>
+<script>
+    function showWelcomeMessage() {
+        var name = document.getElementById('nameInput').value;
+        var welcomeMessage = document.getElementById('welcomeMessage');
+        welcomeMessage.innerHTML = '<h2>Selamat datang, ' + name + '! Klik home untuk masuk</h2>';
+    }
+</script>
+</body>
   </body>
     
     <header>
