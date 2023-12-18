@@ -4,32 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="file:///C:/Users/Fungky/Documents/revou-fungky/11-dec-23-fungky26/css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Mencegah scroll */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Mengisi tinggi minimum setidaknya hingga tampilan penuh viewport */
+        }
+
+        #Home {
+            width: 1366px;
+            height: 578px;
+            background-color: #f0f0f0; /* Warna latar belakang halaman */
+            overflow-y: auto; /* Tambahkan scroll jika kontennya melebihi area yang ditentukan */
+        }
+        #facilitation {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .circle-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        /* ... (style lainnya sesuai kebutuhan) ... */
+
+        #profile {
+            border: 2px solid #333; /* Garis tepi persegi panjang */
+            padding: 20px;
+            margin-top: auto; /* Meletakkan di bagian paling bawah */
+            margin-right: 20px; /* Meletakkan di pojok kanan */
+            max-width: 400px; /* Maksimum lebar untuk memastikan sesuai dengan kontennya */
+        }
+    </style>
     <title>Projeck Mini website Sekolah</title>
 </head>
 <body>
+    <!-- your existing content -->
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <h2>Welcome to Our School</h2>
+        <label for="nameInput">Enter your name: </label>
+        <input type="text" id="nameInput" placeholder="Your Name">
+        <button onclick="displayWelcome()">Submit</button>
+        <p id="welcomeMessage"></p>
+    </section>
+
+    <script>
+        function displayWelcome() {
+            var name = document.getElementById('nameInput').value;
+            var welcomeMessage = document.getElementById('welcomeMessage');
+            
+            if (name.trim() !== '') {
+                welcomeMessage.textContent = 'Hello, ' + name + '! Welcome to our school.';
+            } else {
+                welcomeMessage.textContent = 'Please enter your name.';
+            }
+        }
+    </script>
+  </body>
+    
     <header>
         <div class="logo">
             <img src="https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/1166/original/RevoU_Logo_WhiteBG.png" alt="Pelatihan design revou">
             <div class="title">
                 <h1>PELATIHAN REVOU DESIGN WEBSITE</h1>
+            </div>
         </div>
     </header>
 
     <!-- Menu Table -->
     <table id="menu-table">
         <tr>
-            <td><a href="#home">Home</a></td>
-            <td><a href="#profile">Our Profile</a></td>
-            <td><a href="#achivements">Achievements</a></td>
-            <td><a href="#contact">Contact</a></td>
+            <td onclick="navigateTo('banner')">Home</td>
+            <td onclick="navigateTo('profile')">Profil Kami</td>
+            <td onclick="navigateTo('facilitation')">Achievements</td>
+            <td onclick="navigateTo('messageUs')">Contact</td>
         </tr>
     </table>
 
-</body>
-<div class="logo">
-    <div class="introduction">
-        <h2>Hallo Word</h2>
-        <p></p>
-    </div>
-</html>
+        <!-- Home Section -->
+<section id="Home">
+    <!-- Home Section -->
+<section id="Home">
+    <!-- Banner Section -->
+    <div id="banner">
+       </div>
 
+    <!-- Visi Misi Sekolah -->
+  <!-- Visi Misi Sekolah -->
+<div id="vision-mission">
+    <h2>Visi & Misi Sekolah</h2>
+    <p><strong>Visi:</strong> Berprestasi dilandasi Iman, Taqwa dan Berbudaya Lingkungan serta Berwawasan Global</p>
+    <p><strong>Misi:</strong></p>
+    <ol>
+        <li>Mewujudkan pendidikan untuk menghasilkan prestasi dan lulusan berkualitas tinggi yang peduli dengan lingkungan hidup</li>
+        <li>Mewujudkan sumber daya manusia yang beriman, produktif, kreatif, inovatif dan efektif</li>
+        <li>Mewujudkan pengembangan inovasi pembelajaran sesuai tuntutan</li>
+        <li>Mewujudkan sumber daya manusia yang peduli dalam mencegah pencemaran, mencegah kerusakan lingkungan dan melestarikan lingkungan hidup</li>
+        <li>Mewujudkan sarana prasarana representatif dan up to date</li>
+        <li>Mewujudkan pengelolaan pendidikan yang professional</li>
+        <li>Mewujudkan sistem penilaian yang berafiliasi</li>
+        <li>Mewujudkan budaya yang berkualifikasi</li>
+        <li>Mewujudkan Sekolah yang bersih, hijau dan meminimalis hasil sampah yang tidak bermanfaat</li>
+        <li>Mewujudkan manusia Indonesia yang mampu berkontribusi pada kehidupan bermasyarakat, berbangsa, bernegara dalam peradaban dunia</li>
+        <li>Mewujudkan generasi emas, sehat tanpa narkoba</li>
+    </ol>
+</div>
+ <!-- Our Facilitation -->
+ <div id="facilitation" class="circle-container">
+    <h2>Our Facilitation</h2>
+    <div class="circle" onclick="showFacility('Profesional Teacher')">Teacher</div>
+    <div class="circle" onclick="showFacility('Sport Field')">Sport</div>
+    <div class="circle" onclick="showFacility('Classroom')">Classroom</div>
+</div>
+<section id="messageUs">
+    <h2>Message Us</h2>
+    <form id="messageForm" onsubmit="submitMessage(event)">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" name="name" required>
+
+        <label for="dobInput">Date of Birth:</label>
+        <input type="date" id="dobInput" name="dob" required>
+
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female" required> Female</label>
+
+        <label for="messageInput">Your Message:</label>
+        <textarea id="messageInput" name="message" rows="4" required></textarea>
+
+        <button type="submit">Kirim Pesan Kepada Kami</button>
+    </form>
+
+    <!-- Container for displaying messages -->
+    <div id="messageResults"></div>
+</section>
+
+<!-- your existing content -->
+
+<script>
+    function submitMessage(event) {
+        event.preventDefault();
+
+        var form = document.getElementById('messageForm');
+        var formData = new FormData(form);
+
+        var name = formData.get('name');
+        var dob = formData.get('dob');
+        var gender = formData.get('gender');
+        var message = formData.get('message');
+
+        // Display the submitted data in the results container
+        var resultsContainer = document.getElementById('messageResults');
+        resultsContainer.innerHTML = `
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Date of Birth:</strong> ${dob}</p>
+            <p><strong>Gender:</strong> ${gender}</p>
+            <p><strong>Message:</strong> ${message}</p>
+        `;
+
+        // You can also clear the form or provide a thank you message.
+        form.reset();
+    }
+</script>
+
+        <!-- Profil Kami Section -->
+        <section id="profile">
+            <h2>Profil Kami</h2>
+            <p>Curent Time: <span id="currentTime"></span></p>
+            <p>Nama Sekolah : SMPN 4 MESUJI MAKMUR</p>
+            <p>ALAMAT :Cahaya Mas Kab Oki</p>
+            <p>Kode Post :30678</p>
+            <p>Provinsi :SUMATERA SELATAN</p>
+            <button onclick="refreshTime()">Refresh Time</button>
+        </section>
+    </div>
+
+    <script>
+        function navigateTo(sectionId) {
+            var element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        function refreshTime() {
+            var currentTimeElement = document.getElementById('currentTime');
+            var currentDate = new Date();
+            var currentTime = currentDate.toLocaleTimeString();
+            currentTimeElement.innerText = currentTime;
+        }
+
+        // Refresh time on page load
+        window.onload = refreshTime;
+    </script>
+</body>
+</html>
