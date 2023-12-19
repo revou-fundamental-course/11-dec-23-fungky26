@@ -131,79 +131,9 @@ button:hover {
 }
 
 #facilitation {
-    text-align: center;
-    padding: 20px;
-}
-
-.circle-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; /* Memusatkan vertikal */
-    margin-top: 20px;
-}
-
-.circle {
-    width: 100px;
-    height: 100px;
-    background-color: #3498db;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column; /* Mengatur elemen anak menjadi kolom */
-    align-items: center; /* Memusatkan horizontal */
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 10px; /* Memberi jarak antar bulatan */
-}
-
-/* Menambahkan style untuk membuat container lebih lebar jika diperlukan */
-#facilitation .circle-container {
-    max-width: 400px; /* Sesuaikan lebar container dengan kebutuhan */
-
-}
-/* styles.css */
-
-#messageResults {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border: 2px solid #333;
-    padding: 10px;
-}
-
-#messageResults p {
-    width: 48%;
-    margin: 0 0 10px;
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-   
-#welcomeMessage {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#nameInput {
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-#submitButton {
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-#Home {
-    width: 1366px;
-    height: 578px;
-    background-color: #f0f0f0; /* Warna latar belakang halaman */
-    overflow-y: auto; /* Tambahkan scroll jika kontennya melebihi area yang ditentukan */
-}
-#facilitation {
+    border: 2px solid #00060a; /* Warna dan ketebalan garis tepi */
+    width: 100%;
+    height: 200px;
     text-align: center;
     padding: 20px;
 }
@@ -218,10 +148,9 @@ button:hover {
 .circle {
     width: 100px;
     height: 100px;
-    background-color: #24292c;
-    border-radius: 50%;
+    background-color: #1b2329;
+    border-radius: 70%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
@@ -229,6 +158,7 @@ button:hover {
     cursor: pointer;
     margin-right: 10px;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -253,7 +183,6 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
 form {
     display: flex;
     flex-direction: column;
@@ -269,6 +198,7 @@ form input {
 button {
     width: 100%;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -277,24 +207,20 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 #messageUs {
     display: flex;
     justify-content: space-around; /* Menyusun elemen secara merata */
 }
 
-#messageForm {
-    width: 45%; /* Memberikan lebar pada form */
+#messageForm,
+#messageResults {
+    flex: 1; /* Memberikan properti flex untuk menyesuaikan ruang secara merata */
     padding: 20px;
     margin: 10px;
     border: 2px solid #333;
 }
 
-#messageResults {
-    width: 45%; /* Memberikan lebar pada hasil pesan */
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid #333;
-}
 
 #profile {
     width: 45%; /* Memberikan lebar pada bagian profil */
@@ -313,6 +239,21 @@ body {
 
 /* Styling untuk efek hover */
 .design-by:hover {
+    color: #ffcc00; /* Warna teks saat dihover */
+    cursor: pointer;
+}
+/* CSS untuk Developer by Fungky Setiawan */
+.developer-by {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #ffffff; /* Warna teks */
+    font-style: italic;
+}
+
+/* Styling untuk efek hover */
+.developer-by:hover {
     color: #ffcc00; /* Warna teks saat dihover */
     cursor: pointer;
 }
